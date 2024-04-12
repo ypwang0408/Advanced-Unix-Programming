@@ -11,9 +11,7 @@ int main(int argc, char *argv[]) {
         switch (opt) {
             case 'o':
                 output_file = optarg;
-                FILE *tmp_outfile;
-                tmp_outfile = fopen(output_file, "w");
-                fclose(tmp_outfile);
+                fclose(fopen(output_file, "w"));
                 break;
             case 'p':
                 so_path = optarg;
