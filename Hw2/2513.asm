@@ -1,0 +1,4 @@
+mov eax, [0x600000]
+imul eax, 5
+neg eax
+#?????
