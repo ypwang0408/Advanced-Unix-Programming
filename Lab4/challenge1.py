@@ -1,6 +1,5 @@
 from pwn import *
 r = remote('up.zoolab.org', 10931)
-
 flag = True
 while flag:
     r.sendline(b'R')
@@ -9,7 +8,6 @@ while flag:
         flag = False
         print(rec, end='')
         break
-    r.sendline(b'flag')
-    
+    r.sendline(b'flag')    
 r.sendline(b'Q')
 r.close()
