@@ -1,9 +1,7 @@
 from pwn import *
 import os
 import time
-
 r = remote('up.zoolab.org', 10932)
-
 r.recvuntil(b'?').decode()
 r.sendline(b'g')
 r.sendline(b'1/10000')
